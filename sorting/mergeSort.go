@@ -1,8 +1,4 @@
-package main
-
-import (
-	"fmt"
-)
+package sort
 
 // standard solution using indicies
 func merge(left, right []int) []int {
@@ -46,10 +42,4 @@ func mergeSort(arr []int) []int {
 		right = mergeSort(right)
 	}
 	return merge(left, right)
-}
-
-func main() {
-	array := []int{1, 6, 2, 4, 9, 0, 5, 3, 7, 13, 11}
-	fmt.Println("original array: ", array)
-	fmt.Println("merged: ", mergeSort(array))
 }

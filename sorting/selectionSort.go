@@ -1,19 +1,10 @@
-package main
-
-import (
-	"fmt"
-)
+package sort
 
 func swapElements(arr []int, indexOne int, indexTwo int) {
-	fmt.Printf("swapping %d at index %d and %d at index %d\n",
-		arr[indexOne],
-		indexOne,
-		arr[indexTwo],
-		indexTwo)
 	temp := arr[indexOne]
 	arr[indexOne] = arr[indexTwo]
 	arr[indexTwo] = temp
-	fmt.Println("Array is now: ", arr)
+	// fmt.Println("Array is now: ", arr)
 }
 
 // selection sort in incrementing or decrementing order
@@ -31,11 +22,4 @@ func selectionSort(increment bool, arr []int) {
 		}
 		swapElements(arr, i, swapIndex)
 	}
-}
-
-func main() {
-	array := []int{1, 6, 2, 4, 9, 0, 5, 3, 7, 8}
-	fmt.Println("Unsorted array: ", array)
-	selectionSort(true, array)
-	fmt.Println("Sorted array: ", array)
 }
